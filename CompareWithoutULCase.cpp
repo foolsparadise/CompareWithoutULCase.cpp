@@ -39,10 +39,16 @@ CompareN(const char* s1, const char *s2, int count, bool ignore_case)
         return 0;
     }
 }
-int CompareWithoutULCase(char * str1, char * str2)
+int 
+//CompareWithoutULCaseClass::
+CompareWithoutULCase(char * str1, char * str2) 
 {
 	printf("%s %s\n", str1, str2);
-    if(strlen(str1)!=strlen(str2)) return -1;
+    if(strlen(str1)!=strlen(str2)) 
+    {
+        printf("length not match!\n");
+        return -1;
+    }
 	if(CompareN(str1,str2,strlen(str1),1) == 0) 
 	{
 		printf("match without case!\n");
@@ -52,10 +58,10 @@ int CompareWithoutULCase(char * str1, char * str2)
 	return -1;
 }
 
-/* for test
+/* 
+//for test
 int main(int argc , char** argv)
 {
-
     if(argc!=3) {
         printf("Usage: xxx str1 str2\n");
         return 1;
@@ -65,4 +71,3 @@ int main(int argc , char** argv)
     return 0;
 }
 */
-
